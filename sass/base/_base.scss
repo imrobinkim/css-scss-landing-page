@@ -1,0 +1,21 @@
+// base.scss -> for low-level basics
+// i.e. resets, styles for html & body selectors
+
+*,
+*::after,
+*::before {
+  /* Apply to all after & before pseudo-elements */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* force inheritance from body (so that it can be overridden by plugins if necessary */
+}
+
+html {
+  /* Root font-size, aka defines what 1 rem is */
+  /* (use percentage as unit so that user can zoom in/out on browser) */
+  font-size: 62.5%; /* 1 rem = 10px or 62.5% of 16px (16px is usual default browser font-size) */
+}
+
+body {
+  box-sizing: border-box;
+}

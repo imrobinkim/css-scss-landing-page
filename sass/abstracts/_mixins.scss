@@ -1,0 +1,10 @@
+@mixin clearfix {
+  // Appends a pseudoelement after an element (whose children are all float,
+  // thus causing height to collapse) that clears all floats before it.
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
