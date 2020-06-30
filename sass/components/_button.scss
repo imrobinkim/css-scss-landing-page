@@ -1,5 +1,7 @@
 /* pseudoclass: used to style elements in a specific state */
 .btn {
+  // Add single "&" to apply styles to <button>, not just <a>
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -10,6 +12,10 @@
     transition: all 0.2s; /* on initial state */
     position: relative;
     font-size: $default-font-size;
+
+    // Changes for the <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -23,7 +29,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     /* when element is clicked */
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
