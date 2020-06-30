@@ -38,6 +38,15 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   /* pseudoelement: adding a virtual element after element we've selected */
   &::after {
     /* pseudoelement looks exactly like .btn & hides behind it after animation */
